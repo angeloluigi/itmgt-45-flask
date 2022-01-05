@@ -1,0 +1,16 @@
+<html>
+  <header>
+  </header>
+  <body>
+    {% include "header.html" %}
+    <h1>Branches</h1>
+      
+    <table>
+      <tr><th>Code</th><th>Name</th>
+      {% for branch in branch_list %}
+                  <tr><td><a href="branchdetails?code={{branch["code"]}}">{{ branch["code"] }}</a></td><td>{{ branch["name"] }}</td>
+       {% endfor %}
+    </table>
+    {% include "footer.html" %}
+  </body>
+</html>

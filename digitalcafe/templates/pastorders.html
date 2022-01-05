@@ -1,0 +1,20 @@
+<html>
+<header>    
+</header>
+<body>
+    {% include "header.html" %}
+    <h1>Past Orders</h1>
+    
+    {% if order_list != {} %}
+            {% for past_order in orders_list %}
+              
+            {% endfor %}
+    {% else %}
+            <div>No orders have been made yet.</div>
+    {% endif %}
+    <a href="/">Shop for new items.</a>
+
+    {% include "footer.html" %}
+
+</body>
+</html>
